@@ -1,3 +1,5 @@
+//this code is used to generate permutations of a string
+//code has been taken from -https://www.youtube.com/watch?v=cQw8h_prIxc
 import java.util.*;
 
 public class Permutations {
