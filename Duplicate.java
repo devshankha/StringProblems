@@ -10,8 +10,11 @@ public class Duplicate {
 		for (int i=0; i < len;i++) {
 			int index = s1.charAt(i)-'A';
 			System.out.println("Printing the index value "+index);
+			// If bit corresponding to current 
+                       // character is already set 
 			if ((checker & (1<< index)) > 0)
 				return false;
+			// set bit in checker 
 			checker = checker | (1<< index);
 
 		}
