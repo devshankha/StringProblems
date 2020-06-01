@@ -7,6 +7,8 @@ public class AreAnagrams {
 		for (int i=0; i < s1.length();i++){
 			val = val ^ (int)s1.charAt(i);
 			val = val ^ (int)s2.charAt(i); 
+			//looks like this should also work
+			val = val^ s1.charAt(i)^s2.charAt(i);
 		}
 		return val == 0;
 	}
