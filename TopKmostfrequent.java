@@ -1,3 +1,16 @@
+/**
+ * Find the k most frequent words from a file
+Last Updated: 18-08-2020
+Given a book of words. Assume you have enough main memory to accommodate all words. design a data structure to 
+find top K maximum occurring words. The data structure should be dynamic so that new words can be added.
+ */
+
+//good use of hashing and heap datastructure
+//https://www.programcreek.com/2014/05/leetcode-top-k-frequent-elements-java/
+
+
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -23,6 +36,10 @@ public class TopKmostfrequent {
 	    //maintain a heap of size k.
 	    for (Map.Entry<String, Integer> entry : map.entrySet()) {
 	       // queue.offer(entry);
+	     // queue.offer(entry);
+	    	//PriorityQueue doesnot have capacity restrictions
+	    	//so both add and offer have the same semantics
+	    	//so does remove and poll
 	    	queue.add(entry);
 	        if (queue.size() > k) {
 	            //queue.poll();
